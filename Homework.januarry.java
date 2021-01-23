@@ -3,20 +3,42 @@ public class Main {
     static Random random = new Random ();
 
     public static void main(String[] args) {
+        //Targil 3:
 
-        int weight = getIntFromUser ("Please Enter your weight: ");
-        if (weight < 55) {
-            System.out.println ("Thin");
-        } else {
-            System.out.println ("Fat");
-        }
-
+         String fname = getStringFromUser("Please enter your first name:");
+        String lname = getStringFromUser("Please enter your last name:");
 
     }
 
     // Targil 3:
-    private static int getIntFromUser(String msg) {
-        System.out.println (msg);
-        int user_input = scanner.nextInt ();
-        return user_input;
+    private static String getStringFromUser(String msg) {
+        System.out.println(msg);
+        String result = s.nextLine();
+        return result;
+   
     }
+    //Targil 4:
+    
+private static int howManyDigits(int number) {
+        String number_as_string = String.valueOf(number);
+        return number_as_string.length();
+    }
+    //Targil 5:
+
+    private static boolean isLonger(int[] numbers, int len) {
+        return numbers.length > len;
+    }
+    
+    //Targil 6:
+    private static boolean arrayEqual(int[] numbers1, int[] numbers2) {
+        if (numbers1.length != numbers2.length) {
+            return false;
+        }
+        for (int index = 0; index < numbers1.length; index++) {
+            if (numbers1[index] != numbers2[index]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
